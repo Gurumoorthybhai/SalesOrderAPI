@@ -1,4 +1,4 @@
-const userModel = require("../model/userModel");
+const userModel = require("../model/A_userModel");
 
 exports.findAll = (req, res) => {
   console.log("inside users findall");

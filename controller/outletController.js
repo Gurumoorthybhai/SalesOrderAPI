@@ -1,4 +1,5 @@
-const outletModel = require("../model/outletModel");
+const outletModel = require("../model/C_outletModel");
+const productModel = require("../model/B_productModel");
 
 exports.findAll = (req, res, next) => {
   outletModel
@@ -14,6 +15,36 @@ exports.findAll = (req, res, next) => {
       res.status(500).send(err);
     });
 };
+
+/* {
+  include: [
+    {
+      model: productModel,
+      as: "outlet",
+    },
+  ],
+} */
+/* exports.findone = (req, res, next) => {
+  outletModel
+    .findAll({
+      include: [
+        {
+          model: outletModel,
+          as: "product",
+        },
+      ],
+    })
+    .then((data) => {
+      if (data) {
+        // console.log("outlet data ", data);
+        res.send(data);
+      }
+    })
+    .catch((err) => {
+      console.log("getting err in all outlets", err);
+      res.status(500).send(err);
+    });
+}; */
 
 exports.create = (req, res, next) => {
   console.log("create", req.body);
