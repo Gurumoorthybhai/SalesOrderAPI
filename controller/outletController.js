@@ -24,35 +24,14 @@ exports.findAll = (req, res, next) => {
     },
   ],
 } */
-/* exports.findone = (req, res, next) => {
-  outletModel
-    .findAll({
-      include: [
-        {
-          model: outletModel,
-          as: "product",
-        },
-      ],
-    })
-    .then((data) => {
-      if (data) {
-        // console.log("outlet data ", data);
-        res.send(data);
-      }
-    })
-    .catch((err) => {
-      console.log("getting err in all outlets", err);
-      res.status(500).send(err);
-    });
-}; */
 
 exports.create = (req, res, next) => {
-  console.log("create", req.body);
+  //console.log("create", req.body);
   outletModel
     .create(req.body)
     .then((data) => {
       if (data) {
-        console.log("insert outlet", data);
+        //  console.log("insert outlet", data);
 
         res.status(200).send(true);
       }

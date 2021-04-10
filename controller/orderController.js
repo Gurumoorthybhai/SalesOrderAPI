@@ -34,7 +34,7 @@ exports.create = (req, res, next) => {
     .create(req.body)
     .then((data) => {
       if (data) {
-        console.log("insert order", data);
+        // console.log("insert order", data);
 
         res.status(200).send(true);
       }
@@ -46,12 +46,12 @@ exports.create = (req, res, next) => {
 };
 
 exports.update = (req, res) => {
-  console.log("update", req.body);
+  // console.log("update", req.body);
   orderModel
     .update(req.body, { where: { orderId: req.body.orderId } })
     .then((recordStatus) => {
       if (recordStatus) {
-        console.log("success");
+        //  console.log("success");
         res.status(200).send(true);
       } else {
         console.log("error in updating");

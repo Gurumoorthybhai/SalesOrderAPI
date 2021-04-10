@@ -11,9 +11,11 @@ const productModel = Db.define("productDetails", {
   },
   productName: {
     type: sequelize.STRING,
+    allowNull: false,
   },
   productCost: {
-    type: sequelize.STRING,
+    type: sequelize.FLOAT,
+    allowNull: false,
   },
 });
 

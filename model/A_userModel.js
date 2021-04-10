@@ -3,21 +3,24 @@ const Db = require("../dbconfig/connection");
 const productModel = require("./B_productModel");
 const outletModel = require("./C_outletModel");
 const orderModel = require("./D_orderModel");
-const userorderModel = require("./userModel");
 const userModel = Db.define("userDetails", {
   userId: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     primaryKey: true,
+    allowNull: false,
   },
   username: {
     type: Sequelize.STRING,
+    allowNull: false,
   },
   phoneNo: {
     type: Sequelize.INTEGER,
+    allowNull: false,
   },
   reportingManager: {
     type: Sequelize.STRING,
+    allowNull: false,
   },
 });
 

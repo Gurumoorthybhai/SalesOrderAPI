@@ -7,15 +7,19 @@ const outletModel = Db.define("outletDetails", {
     type: sequelize.INTEGER,
     autoIncrement: true,
     primaryKey: true,
+    allowNull: false,
   },
   outletName: {
     type: sequelize.STRING,
+    allowNull: false,
   },
   outletPhoneNo: {
     type: sequelize.BIGINT,
+    allowNull: false,
   },
   outletAddress: {
     type: sequelize.STRING,
+    allowNull: false,
   },
 });
 
