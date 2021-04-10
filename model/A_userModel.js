@@ -15,7 +15,7 @@ const userModel = Db.define("userDetails", {
     allowNull: false,
   },
   phoneNo: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.BIGINT,
     allowNull: false,
   },
   reportingManager: {
